@@ -1,0 +1,13 @@
+#view all set crons.
+crontab -l
+
+#setup a new cron.
+crontab -e
+#opens new crontab in edit mode, type below lines
+ 5 15 * * * ~/Documents/Cron/push-cp-files-cron.sh > ~/Documents/Cron/stdout.log 2> ~/Documents/Cron/stderr.log
+ #cron-expression/script-to-run-path/stdout-path/stderr-path
+ #runs at 3:15pm everyday and logs op/errs
+
+#verify setup 
+crontab -l
+
